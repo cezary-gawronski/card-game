@@ -9,8 +9,12 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 40px 0;
+  min-height: 100vh;
   font-family: "Raleway", sans-serif;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  background-repeat: no-repeat;
 }
 
 /* font-family: 'Raleway', sans-serif; */
@@ -21,20 +25,66 @@ body {
 }
 
 .main {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: 0px auto;
   padding: 0 20px;
+}
+.header {
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 .header__title {
   text-align: center;
 }
+.header__description {
+  text-align: center;
+  line-height: 1.8;
+}
+.logoStackoverFlow {
+  display: inline-block;
+  padding: 3px;
+  max-width: 120px;
+  vertical-align: -8px;
+}
+.logoStackoverFlow:hover {
+  background-color: #fff;
+}
+
+.strongSpecial {
+  margin-top: 10px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.header__description--center {
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.special {
+  font-size: 35px;
+  vertical-align: -5px;
+  letter-spacing: -7px;
+}
+
+.special--space {
+  letter-spacing: unset;
+  color: brown;
+}
 
 .gameBox {
-  min-height: 80vh;
-  padding: 25px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
   text-align: center;
-  background-color: rgb(195, 183, 195);
+  padding: 5px;
+  box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.246);
+  border: 1px solid black;
+  border-radius: 10px;
+  /* background-color: rgb(195, 183, 195); */
 }
 
 .gameBox__command {
@@ -45,28 +95,15 @@ body {
   background-color: var(--bgcAllert);
 }
 
-/* .gameBox__command--red { */
-/* } */
-
-/* .gameBoxContainer { */
-/* z premedytacją zasosowałem tu starsze rozwiązania pozycjonowania elementów 😁 */
-/* font-size: 0; */
-/* text-align: center; */
-/* max-width: 700px; */
-/* display: flow-root; */
-/* margin: 0 auto; */
-/* background-color: aqua; */
-/* } */
-
 .gameBoxContainer {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: rgba(0, 255, 255, 0.239);
+  justify-content: center;
+  /* background-color: rgba(0, 255, 255, 0.239); */
 }
 
 .face {
-  display: inline-block;
+  display: block;
   font-size: 60px;
   margin: 0 20px;
 }
@@ -79,24 +116,46 @@ body {
   border: 1px solid transparent;
   transition: 0.2s linear border;
 }
+.card ~ .card {
+  margin-left: 20px;
+}
 
-/* .card {
-  display: inline-block;
-  width: 110px;
-  height: 160px;
-  background-color: cadetblue;
-  border: 1px solid transparent;
-  transition: 0.2s linear border;
-} */
+@media (max-width: 500px) {
+  .card {
+    flex-shrink: 1;
+    height: 90px;
+  }
+  .card ~ .card {
+    margin-left: 10px;
+  }
+  .face {
+    font-size: 40px;
+    margin: 0 10px;
+  }
+}
+
+.card--cardSuccess {
+  animation: succes 0.5s linear;
+}
+
+@keyframes succes {
+  0% {
+    background-color: cadetblue;
+  }
+  50% {
+    background-color: rgb(46, 255, 9);
+  }
+  100% {
+    background-color: cadetblue;
+  }
+}
 
 .card:hover {
   border: 2px solid red;
 }
 
 .card ~ .card {
-  /* zajefajny stary patent na ustlenie marginesów
-  dla kolejnych elementów z pominięciem pierwszego */
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .gameButton {
