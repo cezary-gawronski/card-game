@@ -28,32 +28,54 @@ body {
 .gameBox {
   min-height: 80vh;
   padding: 25px;
-  background-color: lightcyan;
+  text-align: center;
+  background-color: rgb(195, 183, 195);
 }
 
 .gameBox__command {
-  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  /* text-align: center; */
 }
 
 .gameBoxContainer {
-  /* z premedytacją zasosowałem tu starsze rozwiązania pozycjonowania elementów 😁 */
-  font-size: 0;
-  text-align: center;
-  max-width: 600px;
-  /* display: flow-root; */
-  margin: 0 auto;
-  background-color: aqua;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(0, 255, 255, 0.239);
+}
+/* .gameBoxContainer { */
+/* z premedytacją zasosowałem tu starsze rozwiązania pozycjonowania elementów 😁 */
+/* font-size: 0; */
+/* text-align: center; */
+/* max-width: 700px; */
+/* display: flow-root; */
+/* margin: 0 auto; */
+/* background-color: aqua; */
+/* } */
+
+.face {
+  display: inline-block;
+  font-size: 60px;
+  margin: 0 40px;
 }
 
 .card {
-  display: inline-block;
   width: 110px;
   height: 160px;
-  /* float: left; */
   background-color: cadetblue;
   border: 1px solid transparent;
   transition: 0.2s linear border;
 }
+
+/* .card {
+  display: inline-block;
+  width: 110px;
+  height: 160px;
+  background-color: cadetblue;
+  border: 1px solid transparent;
+  transition: 0.2s linear border;
+} */
 
 .card:hover {
   border: 2px solid red;
@@ -63,4 +85,25 @@ body {
   /* zajefajny stary patent na ustlenie marginesów
   dla kolejnych elementów z pominięciem pierwszego */
   margin-left: 20px;
+}
+
+.gameButton {
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.589);
+  margin: 20px;
+  padding: 10px 26px;
+  border: none;
+  border-radius: 10px;
+  background-color: brown;
+  transition: 0.2s linear;
+}
+
+.gameButton:focus,
+.gameButton:hover {
+  transform: scale(1.05);
+  border-radius: 15px;
+  background-color: rgb(141, 37, 37);
+  color: rgba(255, 255, 255, 0.829);
 }

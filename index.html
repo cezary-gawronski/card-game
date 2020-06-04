@@ -19,7 +19,7 @@
         </h1>
         <p class="header__description">
           Parę słów o wspólnej zabawie. To nic wielkiego. To ćwiczenie
-          instrukcji warunkowych w js.Mam nadzieję, że ta zabawa
+          instrukcji warunkowych w js. Mam nadzieję, że ta zabawa
           zainspiruje&nbsp;Cię do poszukiwań i napisania choć paru linijek
           swojego kodu. Dlaczego? Bo trzeba cały czas pisać ✏⌨✏ 🖱
         </p>
@@ -30,12 +30,23 @@
         </p>
       </header>
       <section class="gameBox">
-        <p class="gameBox__command">Wybierz jeden z poniższych kartoników</p>
+        <p class="gameBox__command">Gotowy? Naciśnij START</p>
         <div class="gameBoxContainer">
+          <div class="containerScore">
+            <span class="face face--faceloser">😥</span>
+            <span class="face face--negativeScore">0</span>
+          </div>
           <div class="card card--cardColor1"></div>
           <div class="card card--cardColor2"></div>
           <div class="card card--cardColor3"></div>
+          <div class="containerScore">
+            <span class="face face--faceWinner">😎</span>
+            <span class="face face--positiveScore">0</span>
+          </div>
         </div>
+        <button class="gameButton">
+          START
+        </button>
       </section>
     </main>
   </body>
