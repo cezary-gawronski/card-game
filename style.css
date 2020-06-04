@@ -15,6 +15,11 @@ body {
 
 /* font-family: 'Raleway', sans-serif; */
 
+:root {
+  --bgcAllert: transparent;
+  --colorAllert: black;
+}
+
 .main {
   max-width: 900px;
   margin: 0 auto;
@@ -36,14 +41,13 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   word-spacing: 5px;
-  /* text-align: center; */
+  color: var(--colorAllert);
+  background-color: var(--bgcAllert);
 }
 
-.gameBoxContainer {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: rgba(0, 255, 255, 0.239);
-}
+/* .gameBox__command--red { */
+/* } */
+
 /* .gameBoxContainer { */
 /* z premedytacją zasosowałem tu starsze rozwiązania pozycjonowania elementów 😁 */
 /* font-size: 0; */
@@ -54,15 +58,23 @@ body {
 /* background-color: aqua; */
 /* } */
 
+.gameBoxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(0, 255, 255, 0.239);
+}
+
 .face {
   display: inline-block;
   font-size: 60px;
-  margin: 0 40px;
+  margin: 0 20px;
 }
 
 .card {
-  width: 110px;
-  height: 160px;
+  flex-shrink: 0;
+  width: 80px;
+  height: 130px;
   background-color: cadetblue;
   border: 1px solid transparent;
   transition: 0.2s linear border;
@@ -99,8 +111,8 @@ body {
   background-color: brown;
   transition: 0.2s linear;
 }
+/* .gameButton:focus, */
 
-.gameButton:focus,
 .gameButton:hover {
   transform: scale(1.05);
   border-radius: 15px;
